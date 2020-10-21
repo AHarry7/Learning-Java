@@ -1,0 +1,29 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+static int min(int a[],int size)
+{
+    int Min=a[0];
+    for(int i=0;i<size;i++)
+    {
+        if(a[i]<Min)
+        {
+            Min=a[i];
+        }
+    }
+    return Min;
+}
+    public static void main(String[] args) {
+    Scanner s=new Scanner(System.in);
+        System.out.println("\n Enter size of array: ");
+        int size= s.nextInt();
+        int myarray[]=new int[size];
+        System.out.println("Enter elements of array : ");
+        for(int i=0;i<size;i++)
+        {
+            myarray[i]=s.nextInt();
+        }
+        int t=min(myarray,size);
+        System.out.println("Minimum Number in the array is "+t);
+    }
+}
